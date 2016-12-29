@@ -1,0 +1,106 @@
+﻿@model IEnumerable<MvcGrid.Models.Satislar>
+
+@{
+    ViewBag.Title = "Satis1";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Satis1</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Musteriler.SirketAdi)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Nakliyeciler.SirketAdi)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Personeller.SoyAdi)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.SatisTarihi)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.OdemeTarihi)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.SevkTarihi)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.NakliyeUcreti)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.SevkAdi)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.SevkAdresi)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.SevkSehri)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.SevkBolgesi)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.SevkPostaKodu)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.SevkUlkesi)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Musteriler.SirketAdi)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Nakliyeciler.SirketAdi)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Personeller.SoyAdi)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.SatisTarihi)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.OdemeTarihi)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.SevkTarihi)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.NakliyeUcreti)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.SevkAdi)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.SevkAdresi)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.SevkSehri)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.SevkBolgesi)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.SevkPostaKodu)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.SevkUlkesi)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.SatisID }) |
+            @Html.ActionLink("Details", "Details", new { id=item.SatisID }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.SatisID })
+        </td>
+    </tr>
+}
+
+</table>

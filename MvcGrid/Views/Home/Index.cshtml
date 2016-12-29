@@ -1,0 +1,23 @@
+﻿@model IEnumerable<MvcGrid.Models.Musteriler>
+@using GridMvc.Html
+
+<link href="@Url.Content("~/Content/Gridmvc.css")" rel="stylesheet" type="text/css" />
+<script src="@Url.Content("~/Scripts/gridmvc.min.js")" type="text/javascript"> </script>
+<link href="@Url.Content("~/Content/bootstrap.css")" rel="stylesheet" />
+<link href="@Url.Content("~/Content/bootstrap.min.css")" rel="stylesheet" type="text/css" />
+<script src="@Url.Content("~/scripts/jquery-1.10.2.min.js")"></script>
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Müşteriler</h2>
+
+@Html.Grid(Model).Columns(columns =>
+{
+    columns.Add(m => m.MusteriID).Titled("MüşteriID").SetWidth(110);
+    columns.Add(m => m.MusteriAdi).Sortable(true).Filterable(true);
+    columns.Add(m => m.MusteriUnvani).Sortable(true).Filterable(true);
+    columns.Add(m => m.Satislars.Count).Sortable(true);
+   
+}).WithPaging(10)
+

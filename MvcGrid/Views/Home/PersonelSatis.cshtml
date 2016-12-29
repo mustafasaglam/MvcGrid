@@ -1,0 +1,11 @@
+﻿@model List<MvcGrid.Models.PersonelSatis>
+@{
+    ViewBag.Title = "PersonelSatis";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>PersonelSatis</h2>
+@foreach (var item in Model)
+{
+    <h1>@item.Personellers.Adi @item.Personellers.SoyAdi</h1>
+}

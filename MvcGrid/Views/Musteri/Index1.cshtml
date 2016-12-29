@@ -1,0 +1,88 @@
+﻿@model IEnumerable<MvcGrid.Models.Musteriler>
+
+@{
+    ViewBag.Title = "Index1";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Index1</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.SirketAdi)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.MusteriAdi)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.MusteriUnvani)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Adres)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Sehir)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Bolge)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.PostaKodu)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Ulke)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Telefon)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Faks)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.SirketAdi)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.MusteriAdi)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.MusteriUnvani)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Adres)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Sehir)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Bolge)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.PostaKodu)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Ulke)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Telefon)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Faks)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.MusteriID }) |
+            @Html.ActionLink("Details", "Details", new { id=item.MusteriID }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.MusteriID })
+        </td>
+    </tr>
+}
+
+</table>

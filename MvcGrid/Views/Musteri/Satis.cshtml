@@ -1,0 +1,29 @@
+﻿@model IEnumerable<MvcGrid.Models.Satislar>
+@{
+    ViewBag.Title = "Satis";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Satis</h2>
+
+<table class="table table-hover">
+    <tr>
+        <th>Ad</th>
+        <th>Satış Tarihi</th>
+        <th>Soyad</th>
+        <th>Nakliyeci Şirket</th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+
+        <tr>
+            <td>@item.Personeller.Adi</td>
+            <td>@item.SatisTarihi</td>
+            <td>@item.Personeller.SoyAdi</td>
+            <td>@item.Nakliyeciler.SirketAdi</td>
+        </tr>
+
+    }
+</table>
+
